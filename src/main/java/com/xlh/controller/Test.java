@@ -24,22 +24,22 @@ import java.util.stream.Stream;
 public class Test {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
 
-        CompletableFuture<String> stringCompletableFuture = CompletableFuture.runAsync(() -> {
-            try {
-                Thread.sleep(1000L);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            System.out.println("======= 异步执行结束 =====");
-        }).thenApply(s -> {
-            System.out.println(" ========== 异步执行结束 执行如下逻辑============== ");
-            return "abc";
-        });
-        System.out.println(" =========== 同步执行结束 =============== ");
-
-        Thread.sleep(2000L);
-
-        System.out.println("stringCompletableFuture = " + stringCompletableFuture.get());
+//        CompletableFuture<String> stringCompletableFuture = CompletableFuture.runAsync(() -> {
+//            try {
+//                Thread.sleep(1000L);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//            System.out.println("======= 异步执行结束 =====");
+//        }).thenApply(s -> {
+//            System.out.println(" ========== 异步执行结束 执行如下逻辑============== ");
+//            return "abc";
+//        });
+//        System.out.println(" =========== 同步执行结束 =============== ");
+//
+//        Thread.sleep(2000L);
+//
+//        System.out.println("stringCompletableFuture = " + stringCompletableFuture.get());
 
 
 
